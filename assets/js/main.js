@@ -23,3 +23,4 @@ if (userAge <= 18){
 }
 
 //comunicarlo in forma umana
+document.getElementById("ticket_price").innerHTML = `Il costo del tuo biglietto é ${trainFarePrice.toFixed(2)} €`
