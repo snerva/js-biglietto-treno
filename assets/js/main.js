@@ -10,17 +10,25 @@ const trainFare = kmNumber * 0.21;
 console.log(trainFare);
 
 let trainFarePrice;
+let finalPrice;
+
 
 if (userAge <= 18){
    trainFarePrice = trainFare * 20 / 100;
    console.log(trainFarePrice);
+   finalPrice = trainFare - trainFarePrice;
+   console.log(finalPrice);
 } else if (userAge >= 65){
     trainFarePrice = trainFare * 40 / 100;
     console.log(trainFarePrice);
+    finalPrice = trainFare - trainFarePrice;
+   console.log(finalPrice);
 } else {
-    trainFarePrice = trainFare;
-    console.log(trainFarePrice);
+    finalPrice = trainFare;
+    console.log(finalPrice);
 }
 
+
+
 //comunicarlo in forma umana
-document.getElementById("ticket_price").innerHTML = `Il costo del tuo biglietto é ${trainFarePrice.toFixed(2)} €`
+document.getElementById("ticket_price").innerHTML = `Il costo del tuo biglietto é ${finalPrice.toFixed(2)} €`
